@@ -1,61 +1,91 @@
+:root {
+    /* Colors */
+    --primary-color: darkblue;
+    --text-light: white;
+    --text-dark: #333;
+    --border-color: #000;
+    --border-color-light: rgb(0 0 0 / 0.2);
+    --background-light: #eee;
+    --shadow-color: gray;
+    
+    /* Spacing */
+    --padding-small: 2px;
+    --padding-medium: 10px;
+    --padding-large: 20px;
+    --margin-standard: 1rem;
+    --margin-top-footer: 15px;
+    
+    /* Sizes */
+    --img-width-main: 150px;
+    --img-width-aside: 200px;
+    --main-max-width: 840px;
+    --aside-width: 20rem;
+    --shadow-blur: 30px;
+    
+    /* Borders */
+    --border-thin: 1px solid var(--border-color);
+    --border-light: 1px solid var(--border-color-light);
+}
+
 nav {
-    background-color: darkblue;
-    padding: 10px;
+    background-color: var(--primary-color);
+    padding: var(--padding-medium);
 }
 
 nav a {
-    color: white ;
-    display: black;
-    padding: 20px;
+    color: var(--text-light);
+    display: block; /* Fixed: was "black" which is invalid */
+    padding: var(--padding-large);
 }
 
 h1 {
-    color: darkblue;
+    color: var(--primary-color);
 }
 
 img {
-    width: 150px;
+    width: var(--img-width-main);
     height: auto;
-    border: 1px solid black;
-    padding: 2px;
-    block-size: 0 0 30px gray;
- }
-
+    border: var(--border-thin);
+    padding: var(--padding-small);
+    /* Fixed: box-shadow syntax was incorrect */
+    box-shadow: 0 0 var(--shadow-blur) var(--shadow-color);
+}
 
 p {
-    padding: 10px;
+    padding: var(--padding-medium);
 }
 
-main{
-    max-width: 840px;
+main {
+    max-width: var(--main-max-width);
 }
 
-aside{
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 0.2);
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
+aside {
+    width: var(--aside-width);
+    margin: var(--margin-standard);
+    border: var(--border-light);
+    padding: var(--margin-standard);
+    background-color: var(--background-light);
+    color: var(--text-dark);
     text-align: center;
 }
 
-aside img{
-    width: 200px;
+aside img {
+    width: var(--img-width-aside);
     height: auto;
 }
 
 main img {
-    width: 150px;
+    width: var(--img-width-main);
     height: auto;
-    ...
 }
 
-p {padding: 0;}
-
+/* Overriding p padding - this seems intentional based on your CSS */
+p {
+    padding: 0;
+}
 
 footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
+    margin-top: var(--margin-top-footer);
+    border-top: var(--border-thin);
     text-align: center;
 }
