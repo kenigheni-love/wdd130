@@ -1,78 +1,94 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
+    <!-- Basic page info -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Our Whitewater rafting company - fun adventures for families">
+    
+    <!-- Description that shows up in Google search results -->
+    <meta name="description" content="About our whitewater rafting company - fun adventures for families">
     <meta name="author" content="Love Kenigheni">
+    
+    <!-- Title that shows in browser tab -->
     <title>About Us - My Rafting Company</title>
-
-    <!-- preconnect to Google Fonts to speed up loading - details obtained from the planning document -->
+    
+    <!-- Google Fonts - These are fonts from the planning document -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Actuallly load the fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     
-    <!-- Link to our CSS file -->
-     <link rel="stylesheet" href="styles/rafting.css">
-      
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- TOP PART OF PAGE - Logo and menu -->
     <header>
-
+        <!-- Company logo - change "my-logo.png" to your actual logo file name -->
         <img src="images/my-logo.png" alt="My Rafting Company Logo">
+        
+        <!-- Navigation menu -->
         <nav>
-            <!-- Navigation menu -->
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
+            <a href="about.html">About Us</a>
             <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
-        <!-- MAIN CONTENT OF PAGE -->
+    <!-- MAIN CONTENT OF PAGE -->
     <main>
         <!-- BIG HERO SECTION - This is the main eye-catching part -->
         <div class="hero">
-            <img src="images/hero-image.jpg" alt="A hero rafting down a river">
+            <!-- Big title that goes ON TOP of the section -->
+            <h1>White Water Rafting</h1>
             
-            <!-- Big title that goes ON TOP of the image -->
-            <h1>My Awesome Rafting Company</h1>
-            
-            <!-- Article box that also goes on top of image -->
-            <article>
-                <!-- Small image of happy person - change file name -->
-                <img src="images/happy-people.jpg" alt="Happy customers smiling">
-                <!-- Company mission/purpose -->
-                <p>We make rafting fun and safe for everyone! Our goal is to give you the best river adventure while keeping you safe. Come join us for an unforgettable experience on the water!</p>
-            </article>
-        </div>
-
+            <!-- Main content paragraph -->
+            <p>We make rafting fun and safe for everyone! Our goal is to give you the best river adventure while keeping you safe. Come join us for an unforgettable experience on the water!</p>
         </div>
 
         <!-- HISTORY SECTION -->
-        <section>
-            <h2>History</h2>
-            <p>Our company started in 2019 when my cousine brother, Goodluck Obiene decided to share his love of river rafting with others. We began with just one raft and a dream. Now, 5+ years later, we are the best rafting company in the area with over 10,000 happy customers!</p>
+        <section class="history">
+            <div class="history-content">
+                <h2>History</h2>
+                <p>Our company started in 2019 when my cousine brother, Goodluck Obiene decided to share his love of river rafting with others. We began with just one raft and a dream. Now, 5+ years later, we are the best rafting company in the area with over 10,000 happy customers</p>
+             </div>
+            <div class="history-image">
+                <img src="images/history-image.jpg" alt="Historical rafting image">
+            </div>
         </section>
 
         <!-- ADVENTURE PICTURES SECTION -->
-        <section>
+        <section class="adventure">
             <h2>Adventure Awaits You!</h2>
-            <!-- 5 pictures of rafting adventures - change these file names -->
-            <img src="images/rafting1.jpg" alt="People paddling through rapids">
-            <img src="images/rafting2.jpg" alt="Calm river with beautiful scenery">
-            <img src="images/rafting3.jpg" alt="Group of friends laughing in raft">
-            <img src="images/rafting4.jpg" alt="Water splashing during exciting rapids">
-            <img src="images/rafting5.jpg" alt="Beautiful mountain river view">
+            <!-- 5 pictures of rafting adventures -->
+            <div class="adventure-grid">
+                <div class="adventure-item">
+                    <img src="images/rafting1.jpg" alt="People paddling through rapids">
+                    <div class="adventure-caption">Fun With Likeminds</div>
+                </div>
+                <div class="adventure-item">
+                    <img src="images/rafting2.jpg" alt="Calm river with beautiful scenery">
+                    <div class="adventure-caption">Nature is Beautuful</div>
+                </div>
+                <div class="adventure-item">
+                    <img src="images/rafting3.jpg" alt="Group of friends laughing in raft">
+                    <div class="adventure-caption">Creating Memories</div>
+                </div>
+                <div class="adventure-item">
+                    <img src="images/rafting4.jpg" alt="Water splashing during exciting rapids">
+                    <div class="adventure-caption">Water Rafting is Fun</div>
+                </div>
+                <div class="adventure-item">
+                    <img src="images/rafting5.jpg" alt="Beautiful mountain river view">
+                    <div class="adventure-caption">Nature's Love</div>
+                </div>
+            </div>
         </section>
     </main>
 
     <!-- BOTTOM OF PAGE - Copyright and social media -->
     <footer>
-        <p>&copy; 2025 My Awesome Rafting Company - Love Kenigheni</p>
+        <!-- Copyright info - PUT YOUR NAME where it says "Your Name" -->
+        <p>&copy; 2024 My Awesome Rafting Company - Love Kenigheni</p>
         
         <!-- Social media icons -->
         <nav class="socialmedia">
@@ -81,9 +97,5 @@
             <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
         </nav>
     </footer>
-</main>
 </body>
 </html>
-   
-   
- 

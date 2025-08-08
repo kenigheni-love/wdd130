@@ -1,238 +1,309 @@
-/* 
-   CSS VARIABLES - These are colors from my planning document!
-   Variables let us reuse colors easily throughout our CSS
-*/
 :root {
   --primary-color: #1E3A8A;    /* Dark blue */
   --secondary-color: #7F7EFF;   /* Light blue */
   --accent1-color: #FF6B35;     /* Orange */
   --accent2-color: #94D82D;     /* Green */
-  --heading-font: "Roboto", sans-serif;      /* Heading font */
-  --body-font: "Open Sans", sans-serif;      /* Body text font */
+  --heading-font: "Roboto", sans-serif;      
+  --body-font: "Open Sans", sans-serif;      
 }
 
-/* 
-   All elements start with no margins or padding
-   This helps make the page look consistent across different browsers
-*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 
-   BODY - This styles the entire page background and text
-*/
+
 body {
-  font-family: var(--body-font);  /* Use the body font variable */
-  color: var(--primary-color);    /* Use the primary color for text */
-  line-height: 1.6;               /* Makes text easier to read */
+  font-family: var(--body-font);  
+  color: var(--primary-color);    
+  line-height: 1.6;               
+  background-color: #f5f5f5;
 }
 
-/* 
-   PAGE LAYOUT - This centers our content and limits the width
-   840px wide and centered on the page
-*/
 header, main, footer {
   width: 840px;
-  margin: 0 auto;  /* This centers the content */
+  margin: 0 auto;  
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* 
-   HEADER - The top part with logo and navigation
-*/
+
 header {
-  background-color: var(--primary-color);  /* Dark blue background */
+  background: linear-gradient(135deg, #e8d5f0, #d4b5e8);  /* Purple gradient like wireframe */
   color: white;
-  padding: 16px;
-  display: flex;                 /* Makes logo and nav sit side by side */
-  justify-content: space-between; /* Pushes logo left, nav right */
-  align-items: center;           /* Centers them vertically */
+  padding: 20px;
+  display: flex;                 
+  justify-content: space-between;
+  align-items: center;           
+  border-bottom: 3px solid #333;
 }
 
-/* Logo image in header */
-header img {
-  height: 60px;    /* Makes logo 60 pixels tall */
-  width: auto;     /* Width adjusts automatically */
+ header img {
+  height: 60px;    
+  background-color: #999;
+  border-radius: 8px;
+  object-fit: contain;
 }
 
-/* Navigation menu */
+
 header nav {
-  display: flex;   /* Makes menu items sit side by side */
-  gap: 20px;       /* 20px space between each menu item */
+  display: flex;   
+  gap: 15px;       
 }
 
-/* Individual menu links */
+
 header nav a {
-  color: white;
-  text-decoration: none;  /* Removes underlines */
-  font-weight: bold;
-  padding: 8px 16px;      /* Space inside each link */
-  border-radius: 4px;     /* Rounded corners */
-  transition: background-color 0.3s;  /* Smooth color change on hover */
+  color: #333;
+  text-decoration: none;  
+  font-weight: normal;
+  padding: 10px 20px;     
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;     
+  transition: background-color 0.3s;  
+  font-size: 14px;
 }
 
 header nav a:hover {
-  background-color: var(--accent1-color);  /* Changes to orange when someone hover over the link */
+  background-color: #f0f0f0; 
 }
 
-/* 
-   HEADINGS - All h1 and h2 elements
-*/
+ 
 h1, h2 {
-  font-family: var(--heading-font);  /* Use the heading font */
-  color: var(--primary-color);       /* Dark blue color */
+  font-family: var(--heading-font);  
+  color: var(--primary-color);       
 }
 
-/* 
-   BASIC SPACING - Adds consistent spacing to these elements
-*/
-nav, p, section, article {
-  margin: 16px;   /* 16px space outside */
-  padding: 8px;   /* 8px space inside */
-}
 
-/* 
-   HERO SECTION - This is the big image area with overlays
-*/
 .hero {
-  position: relative;  /* This lets us put things on top of the image */
-  margin: 0;
-  padding: 0;
-}
-
-/* The big background image */
-.hero img {
-  display: block;   /* Makes image behave like a block element */
-  width: 100%;      /* Makes image fill the entire width */
-  height: auto;     /* Height adjusts automatically to keep image proportions */
-}
-
-/* 
-   BIG TITLE that sits ON TOP of the hero image
-*/
-.hero h1 {
-  position: absolute;  /* This makes it "float" on top of the image */
-  top: 20px;          /* 20px from the top */
-  width: 100%;        /* Full width */
-  padding: 16px;
-  text-align: center; /* Centers the text */
-  opacity: 0.9;       /* Slightly see-through */
-  background-color: var(--accent1-color);  /* Orange background */
-  color: white;
-  font-size: 2.5em;   /* Big text size */
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);  /* Drop shadow for readability */
-}
-
-/* 
-   ARTICLE BOX that also sits on top of the hero image
-*/
-.hero article {
-  position: absolute;  /* Floats on top of image */
-  bottom: 20px;       /* 20px from bottom */
-  left: 20px;         /* 20px from left */
-  right: 20px;        /* 20px from right */
-  background-color: rgba(255, 255, 255, 0.9);  /* White background, slightly see-through */
-  padding: 20px;
-  border-radius: 8px;    /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);  /* Drop shadow */
-}
-
-/* 
-   SMALL IMAGE inside the article box
-   This floats to the right side of the text
-*/
-.hero article img {
-  float: right;        /* Makes image float to the right */
-  width: 125px;        /* 125 pixels wide */
-  height: auto;        /* Height adjusts automatically */
-  margin-left: 16px;   /* Space on the left side */
-  margin-bottom: 8px;  /* Space on the bottom */
-  border-radius: 8px;  /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);  /* Small drop shadow */
-}
-
-/* 
-   MAIN SECTIONS - History and Adventure sections
-*/
-section {
-  background-color: #f9f9f9;  /* Light gray background */
-  margin: 20px 0;             /* 20px space above and below */
-  border-radius: 8px;         /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Subtle shadow */
-}
-
-/* Section headings (h2) */
-section h2 {
-  color: var(--primary-color);     /* Dark blue */
-  font-size: 1.8em;               /* Big text */
-  margin-bottom: 16px;            /* Space below */
-  padding-bottom: 8px;            /* Space inside bottom */
-  border-bottom: 2px solid var(--accent2-color);  /* Green underline */
-}
-
-/* 
-   ADVENTURE IMAGES - The 5 pictures in the last section
-*/
-section:last-of-type {
-  text-align: center;  /* Centers all the images */
-}
-
-section:last-of-type img {
-  width: 150px;        /* All images 150px wide */
-  height: 100px;       /* All images 100px tall */
-  object-fit: cover;   /* Crops images to fit nicely */
-  margin: 8px;         /* 8px space around each image */
-  border-radius: 8px;  /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);  /* Drop shadow */
-  transition: transform 0.3s;  /* Smooth animation on hover */
-}
-
-/* What happens when someone hover over adventure images */
-section:last-of-type img:hover {
-  transform: scale(1.05);  /* Makes image slightly bigger */
-}
-
-/* 
-   FOOTER - Bottom of the page
-*/
-footer {
-  background-color: var(--primary-color);  /* Dark blue background */
-  color: white;
-  padding: 20px;
+  position: relative;
+  padding: 60px 40px;
   text-align: center;
-  display: flex;                 /* Makes copyright and social media sit side by side */
-  justify-content: space-between; /* Pushes them to opposite ends */
-  align-items: center;           /* Centers them vertically */
-  margin-top: 40px;              /* Space above footer */
+  background: white;
+  border-bottom: 3px solid #333;
+  overflow: hidden;
+  margin: 0;
+}
+
+
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.hero::before {
+  left: 0;
+  border-width: 100px 0 0 100px;
+  border-color: transparent transparent transparent #333;
+}
+
+.hero::after {
+  right: 0;
+  border-width: 0 100px 100px 0;
+  border-color: transparent #333 transparent transparent;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 16px;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  padding: 8px;
+}
+
+
+
+.history {
+  display: flex;
+  padding: 40px;
+  gap: 30px;
+  align-items: flex-start;
+  border-bottom: 2px solid #ccc;
+  background-color: #f9f9f9;
+  margin: 0;
+}
+
+.history-content {
+  flex: 1;
+}
+
+.history h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.history p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 16px;
+  padding: 8px;
+}
+
+.history-image {
+  width: 200px;
+  height: 150px;
+  background: linear-gradient(135deg, #4a4a9e, #6b5bb3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.history-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+
+.adventure {
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-bottom: 2px solid #ccc;
+  text-align: center;
+  margin: 0;
+}
+
+.adventure h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+.adventure-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.adventure-item {
+  flex: 1;
+  text-align: center;
+}
+
+.adventure-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;
+  transition: transform 0.3s;
+}
+
+.adventure-item img:hover {
+  transform: scale(1.05);
+}
+
+.adventure-caption {
+  font-size: 14px;
+  color: #666;
+  font-weight: bold;
+}
+
+
+
+footer {
+  background: linear-gradient(135deg, #e8d5f0, #d4b5e8);  
+  color: #333;
+  padding: 20px;
+  display: flex;                 
+  justify-content: space-between; 
+  align-items: center;           
+  margin-top: 0;
 }
 
 footer p {
-  margin: 0;  /* Removes default margin */
+  margin: 0;  
+  font-size: 14px;
 }
 
-/* 
-   SOCIAL MEDIA ICONS
-*/
+
 .socialmedia {
-  display: flex;  /* Makes icons sit side by side */
-  gap: 15px;      /* 15px space between icons */
+  display: flex;  
+  gap: 10px;      
   margin: 0;
   padding: 0;
 }
 
 .socialmedia a {
-  text-decoration: none;  /* Removes underlines from icon links */
+  text-decoration: none;  
 }
 
 .socialmedia img {
-  width: 30px;   /* All social media icons 30px wide */
-  height: 30px;  /* All social media icons 30px tall */
-  transition: opacity 0.3s;  /* Smooth fade effect on hover */
+  width: 30px;   
+  height: 30px;  
+  background-color: #666;
+  border-radius: 4px;
+  padding: 5px;
+  transition: background-color 0.3s;  
 }
 
-/* What happens when someone hover over social media icons */
+
 .socialmedia img:hover {
-  opacity: 0.7;  /* Makes them slightly faded */
+  background-color: #333;  
+}
+
+
+@media (max-width: 768px) {
+  header, main, footer {
+    width: 100%;
+  }
+  
+  header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .history {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .history-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .adventure-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
